@@ -93,7 +93,6 @@ body {
 .leftitem__form--input {
   padding: 12px;
   border-radius: 10px;
-  cursor: pointer;
 }
 .leftitem__form--iconlist {
   display: flex;
