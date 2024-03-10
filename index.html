@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="tab">
+      <button class="tab__tabslinks" onclick="openTabs(event,'detail')">
+        Chi Tiết
+      </button>
+      <button class="tab__tabslinks" onclick="openTabs(event,'links')">
+        Links
+      </button>
+    </div>
+    <div class="container__content">
+      <div class="container__content--item">
+        <div id="detail" class="tabcontent">
+          <div class="container__content--leftitem">
+            <h3>Chi Tiết</h3>
+            <form
+              onsubmit="return false"
+              class="leftitem__form"
+              id="informationform"
+            >
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="id">Tên</label>
+                <input class="leftitem__form--input" type="text" id="name" />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="title"
+                  >Chức danh</label
+                >
+                <input class="leftitem__form--input" type="text" id="title" />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="phone"
+                  >Số điện thoại</label
+                >
+                <input class="leftitem__form--input" type="text" id="phone" />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="email">Email</label>
+                <input class="leftitem__form--input" type="text" id="email" />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="address"
+                  >Địa chỉ</label
+                >
+                <input class="leftitem__form--input" type="text" id="address" />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="website"
+                  >Website</label
+                >
+                <input class="leftitem__form--input" type="text" id="website" />
+              </div>
+              <input
+                class="leftitem__form--input"
+                type="button"
+                onclick="changeText()"
+                value="Submit"
+              />
+            </form>
+          </div>
+        </div>
+        <div id="links" class="tabcontent">
+          <div class="container__content--leftitem">
+            <h3>Links</h3>
+            <form onsubmit="return false" class="leftitem__form" id="linkform">
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  Facebook</label
+                >
+                <input
+                  class="leftitem__form--input"
+                  type="text"
+                  id="Facebook"
+                />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                  Instagram</label
+                >
+                <input
+                  class="leftitem__form--input"
+                  type="text"
+                  id="Instagram"
+                />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="Twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                  Twitter</label
+                >
+                <input class="leftitem__form--input" type="text" id="Twitter" />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="Youtube">
+                  <i class="fa-brands fa-youtube"></i>
+
+                  Youtube</label
+                >
+                <input class="leftitem__form--input" type="text" id="Youtube" />
+              </div>
+              <div class="leftitem__form--container">
+                <label class="leftitem__form--label" for="address">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  Linkedin</label
+                >
+                <input
+                  class="leftitem__form--input"
+                  type="text"
+                  id="Linkedin"
+                />
+              </div>
+              <div class="leftitem__form--iconlist">
+                <div
+                  class="leftitem__form--icon"
+                  id="FacebookIcon"
+                  onclick="changeService('FacebookIcon')"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                  <p>Facebook</p>
+                </div>
+                <div
+                  class="leftitem__form--icon"
+                  id="InstagramIcon"
+                  onclick="changeService('InstagramIcon')"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                  <p>Instagram</p>
+                </div>
+                <div
+                  class="leftitem__form--icon"
+                  id="TwitterIcon"
+                  onclick="changeService('TwitterIcon')"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                  <p>Twitter</p>
+                </div>
+                <div
+                  class="leftitem__form--icon"
+                  id="YoutubeIcon"
+                  onclick="changeService('YoutubeIcon')"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                  <p>Youtube</p>
+                </div>
+                <div
+                  class="leftitem__form--icon"
+                  id="LinkedinIcon"
+                  onclick="changeService('LinkedinIcon')"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  <p>Linkedin</p>
+                </div>
+              </div>
+              <input
+                class="leftitem__form--input"
+                type="button"
+                onclick="changeLinks()"
+                value="Submit"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container__content--rightitem" id="outputContainer">
+        <div class="content__rightitem">
+          <div class="rightitem__header">
+            <div class="rightitem__header--dotlist">
+              <span class="rightitem__header--dotitem"></span>
+              <span class="rightitem__header--dotitem"></span>
+              <span class="rightitem__header--dotitem"></span>
+            </div>
+            <div class="rightitem__header--textlist">
+              <p class="rightitem__header--textitem">
+                Đến:
+                <span class="rightitem__header--descriptiontext">
+                  Email người nhận</span
+                >
+              </p>
+              <p class="rightitem__header--textitem">
+                Chủ đề:
+                <span class="rightitem__header--descriptiontext"
+                  >Kiểm tra chữ ký email mới của tôi !</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="rightitem__body--container">
+            <hr />
+            <div class="rightitem__body--infomationcontainer">
+              <div>
+                <p class="rightitem__body--name">
+                  <span id="nameValue">Dương Thanh Nghê 123</span>
+                </p>
+                <p class="rightitem__body--title">
+                  <span id="titleValue">Develop</span>
+                </p>
+                <p class="rightitem__body--information">
+                  <i class="fa-solid fa-phone"></i> Số điện thoại : &nbsp;
+                  <span id="phoneValue">123456</span>
+                </p>
+                <p class="rightitem__body--information">
+                  <i class="fa-solid fa-envelope"></i> Email : &nbsp;
+                  <span id="emailValue">nghe122222223@mail.com</span>
+                </p>
+                <p class="rightitem__body--information">
+                  <i class="fa-solid fa-location-dot"></i> Địa chỉ : &nbsp;
+                  <span id="addressValue">123 Da nang</span>
+                </p>
+                <p class="rightitem__body--information">
+                  <i class="fa-solid fa-link"></i> Website : &nbsp;
+                  <span id="websiteValue">google.com</span>
+                </p>
+              </div>
+              <div class="rightitem__body--avatarandnetwork">
+                <img
+                  class="rightitem__body--avatar"
+                  src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/170201_v9_bc.jpg"
+                  alt="avatar"
+                />
+                <div class="rightitem__body--networklist">
+                  <div
+                    class="rightitem__body--networkicon hidden"
+                    id="FacebookIconHidden"
+                  >
+                    <a id="FacebookIconLink" href="">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </div>
+                  <div
+                    class="rightitem__body--networkicon hidden"
+                    id="InstagramIconHidden"
+                  >
+                    <a id="InstagramIconLink" href="">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                  <div
+                    class="rightitem__body--networkicon hidden"
+                    id="TwitterIconHidden"
+                  >
+                    <a id="TwitterIconLink" href="">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div
+                    class="rightitem__body--networkicon hidden"
+                    id="YoutubeIconHidden"
+                  >
+                    <a id="YoutubeIconLink" href="">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                  </div>
+                  <div
+                    class="rightitem__body--networkicon hidden"
+                    id="LinkedinIconHidden"
+                  >
+                    <a id="LinkedinIconLink" href="">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
