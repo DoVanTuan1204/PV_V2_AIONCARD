@@ -20,9 +20,11 @@
   <body>
     <div class="tab">
       <button class="tab__tabslinks" onclick="openTabs(event,'detail')">
+        <i class="fa-solid fa-user"></i>
         Chi Tiết
       </button>
       <button class="tab__tabslinks" onclick="openTabs(event,'links')">
+        <i class="fa-solid fa-share-nodes"></i>
         Links
       </button>
     </div>
@@ -69,7 +71,7 @@
                 <input class="leftitem__form--input" type="text" id="website" />
               </div>
               <input
-                class="leftitem__form--input"
+                class="leftitem__form--inputbutton"
                 type="button"
                 onclick="changeText()"
                 value="Submit"
@@ -189,7 +191,7 @@
                 </div>
               </div>
               <input
-                class="leftitem__form--input"
+                class="leftitem__form--inputbutton"
                 type="button"
                 onclick="changeLinks()"
                 value="Submit"

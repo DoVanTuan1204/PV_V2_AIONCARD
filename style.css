@@ -32,6 +32,14 @@ body {
   border-radius: 8px;
   transition: 0.3s;
   font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab button i {
+  padding: 7px;
 }
 
 .tab button:hover {
@@ -94,6 +102,13 @@ body {
   padding: 12px;
   border-radius: 10px;
 }
+
+.leftitem__form--inputbutton {
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .leftitem__form--iconlist {
   display: flex;
   flex-direction: row;
